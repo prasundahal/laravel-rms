@@ -28,7 +28,7 @@ Route::resource('kitchens', 'kitchenController');
 Route::resource('iteams', 'IteamController');
 
 Route::resource('tables', 'TableController');
-
+Route::get('table-vcreate', 'TableController@vcreate')->name('table.vcreate');
 Route::resource('tableorders', 'TableorderController');
 
 Route::group(['middleware' => ['auth']], function() {

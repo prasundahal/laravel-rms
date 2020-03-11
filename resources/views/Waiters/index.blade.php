@@ -25,7 +25,7 @@
             <td>Item Price</td>
             <td>Item categorys </td>
             <td>Item Description</td>
-
+            <td>Item Time </td>
             <td>Image </td>
             <td colspan = 2>Actions</td>
           </tr>
@@ -38,7 +38,7 @@
             <td>{{$iteam->iteam_price}}</td>
             <td>{{$iteam->iteam_category}}</td>
             <td>{{$iteam->iteam_discription}}</td>
-
+            <td>{{$iteam->iteam_time}}</td>
             <td><img src="{{ URL::to('/') }}/images/{{ $iteam->image }}" class="img-thumbnail" width="75" /></td>
 
             <td>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Iteam;
 use App\Kitchen;
+use App\Order;
 use Illuminate\Http\Request;
 
 class KitchenController extends Controller
@@ -14,9 +15,9 @@ class KitchenController extends Controller
      */
     public function index()
     {
-        $iteams = iteam::all();
+        $orders = order::all();
 
-        return view('kitchens.index', compact('iteams'));
+        return view('kitchens.index', compact('orders'));
     }
 
     /**

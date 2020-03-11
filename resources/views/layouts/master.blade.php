@@ -65,14 +65,43 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <ul class="nav nav-treeview">
           @if (Auth::user()->roles->pluck('id')[0] == 1)
 
+
+          <li class="nav-item">
+            <a href="{{ route('iteams.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Add Menu Items
+                <span class=""></span>
+              </p>
+            </a>
+          </li>
               <li class="nav-item">
                 <a href="{{ route('tables.index')}}" class="nav-link">
-                <a href="{{ route('tables.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add Tables</p>
+                  <p>Tables</p>
                 </a>
               </li>
             </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{ route('tables.create')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>Add Tables</p>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+
+
+          <li class="nav-item">
+            <a href="{{ route('kitchens.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Kitchen
+              </p>
+            </a>
           </li>
 
           <li class="nav-item">
@@ -83,15 +112,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </p>
             </a>
           </li>
+
+
           <li class="nav-item">
-            <a href="{{ route('iteams.index')}}" class="nav-link">
+            <a href="{{ route('orders.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                Add Menu Items
+                view Orders
                 <span class=""></span>
               </p>
             </a>
           </li>
+
+
           <li class="nav-item">
             <a href="{{ route('users.index') }}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
@@ -114,10 +147,38 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="{{ route('tables.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                table book
+                Book a Table
               </p>
             </a>
           </li>
+          <li class="nav-item">
+            <a href="{{ route('tables.create')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Create New Vtable
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('orders.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                View Orders
+                <span class=""></span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{ route('orders.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                From Kitchen Orders
+                <span class=""></span>
+              </p>
+            </a>
+          </li>
+
+
           @endif
           <li class="nav-item">
               <a class="nav-link" href="{{ route('logout') }}"

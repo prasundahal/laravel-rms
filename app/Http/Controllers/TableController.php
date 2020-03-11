@@ -29,6 +29,10 @@ class TableController extends Controller
     {
         return view('tables.create');
     }
+    public function vcreate()
+    {
+        return view('tables.vcreate');
+    }
 
     /**
      * Store a newly created resource in storage.
