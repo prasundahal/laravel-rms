@@ -29,7 +29,7 @@
               <td>{{$table->table_capicity}}</td>
 
                 <td>
-                    <a href="{{ route('tableorders.edit',$table->id)}}" class="btn btn-primary">book table</a>
+                    <a href="{{ route('tableorders.edit',$table->id)}}" class="btn btn-primary">Orders</a>
                 </td>
                 <td>
                   <form action="{{ route('tables.destroy', $table->id)}}" method="post">

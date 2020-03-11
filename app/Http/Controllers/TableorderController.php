@@ -64,10 +64,10 @@ class TableorderController extends Controller
      */
     public function edit(Request $request, $id)
     {
-        $iteams = Iteam::pluck('iteam_name', 'id');
-        $selectedID = 2;
+        $iteams = Iteam::all();
+        $selectedId = 1;
         $table = table::find($id);
-        return view('tableorders.edit', compact('table','iteams','selectedID'));
+        return view('tableorders.edit', compact('table','iteams','selectedID', 'id'));
     }
 
     /**
@@ -79,31 +79,7 @@ class TableorderController extends Controller
      */
     public function update(Request $request, $id)
     {
-
-
-
-
-        $request->validate([
-
-            'table_number'=>'required',
-            'iteam_name'=>'required',
-            'iteam_price'=>'required'
-
-
-            ]);
-
-         $table = table::find($id);
-
-
-         $arrayTostring = implode(',', $request->input('iteam_name'));
-         $table->iteam_name = $request->get('$arrayTostring');
-         $table->table_number = $request->get('table_number');
-
-         $table->iteam_price = $request->get('iteam_price');
-         $table->save();
-
-
-         return redirect('/tables')->with('sucess','table Updated!');
+      
 
     }
 

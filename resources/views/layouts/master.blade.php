@@ -12,6 +12,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <title>{{ config('app.name', 'Ketali Chiya') }}</title>
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
@@ -114,7 +115,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <a href="{{ route('tables.index')}}" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
-                table book
+                Take Order
               </p>
             </a>
           </li>
