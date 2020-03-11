@@ -36,7 +36,13 @@
     <td>
       @if(!empty($user->getRoleNames()))
         @foreach($user->getRoleNames() as $v)
+        @if($v == "Waiter")
            <label class="badge badge-success">{{ $v }}</label>
+        @elseif($v == "Admin")
+           <label class="badge badge-warning">{{ $v }}</label>
+        @elseif($v == "Chef")
+           <label class="badge badge-danger">{{ $v }}</label>
+        @endif
         @endforeach
       @endif
     </td>
@@ -53,6 +59,5 @@
 </div>
 
 {!! $data->render() !!}
-
 
 @endsection
